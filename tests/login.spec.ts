@@ -2,7 +2,7 @@ import test, { expect } from "@playwright/test";
 
 test("Login test", async ({page}) => {
     //Navigate to SauceDemo
-    await page.goto("https://www.saucedemo.com/")
+    await page.goto("")
     await expect(page).toHaveTitle("Swag Labs")
 
     // Login
@@ -12,12 +12,11 @@ test("Login test", async ({page}) => {
     await page.getByTestId('login-button').click() //await page.click("[data-test='login-button']")
     await expect(page.getByTestId('title')).toHaveText('Products')
 
-    await page.waitForTimeout(10000)
 });
 
 test("Login with invalid credentials", async({page}) =>{
     //Navigate to SauceDemo
-    await page.goto("https://www.saucedemo.com/")
+    await page.goto("")
     await expect(page).toHaveTitle("Swag Labs")
 
     //Fill in username
@@ -53,7 +52,7 @@ test("Login with invalid credentials", async({page}) =>{
 
 test("Login with locked_out_user", async ({page}) => {
     //Navigate to SauceDemo
-    await page.goto("https://www.saucedemo.com/")
+    await page.goto("")
     await expect(page).toHaveTitle("Swag Labs")
 
     // Login
